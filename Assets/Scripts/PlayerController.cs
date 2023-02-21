@@ -4,32 +4,22 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private Vector2 moveDirection;
-    private float moveY = 0f;
-    private float moveX = 0f;
-
+    private Vector3 moveDirection;
     private Rigidbody2D playerRb;
     [SerializeField] private float moveSpeed =5f;
+    private PlayerAnimationHandler playerAnimation;
 
     private void Awake()
     {
         playerRb = GetComponent<Rigidbody2D>();
+        playerAnimation = GetComponent<PlayerAnimationHandler>();
     }
     private void Update()
     {
-        if (Input.GetKey(KeyCode.W))
-            moveY = +1f;
+        float moveX = Input.GetAxisRaw("Horizontal");
+        float moveY = Input.GetAxisRaw("Vertical");
 
-        if (Input.GetKey(KeyCode.S))
-            moveY = -1f;
-
-        if (Input.GetKey(KeyCode.A))
-            moveX = -1f;
-
-        if (Input.GetKey(KeyCode.D))
-            moveX = +1f;
-
-        moveDirection = new Vector2(moveX, moveY).normalized;
+        moveDirection = new Vector3(moveX, moveY).normalized;
 
     }
 

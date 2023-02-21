@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3786683303911734238}
   - component: {fileID: 2985556516045075603}
   - component: {fileID: 1723334608422996954}
-  - component: {fileID: 4836588863969930158}
+  - component: {fileID: -2764715511487790306}
   m_Layer: 0
   m_Name: bullet
   m_TagString: Untagged
@@ -112,7 +112,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!50 &4836588863969930158
+--- !u!50 &-2764715511487790306
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0

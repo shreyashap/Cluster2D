@@ -34,7 +34,7 @@ public class Shooting : MonoBehaviour
 
     private void PointAtMouse()
     {
-        Vector3 lookDir = (mousePos - aimTransform.position).normalized;
+        Vector3 lookDir = (mousePos - transform.position).normalized;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
         aimTransform.eulerAngles = new Vector3(0, 0, angle);
     }
